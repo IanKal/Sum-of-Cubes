@@ -1,23 +1,23 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class SumofCubes{
     public static void main(String[] args) {
-        int num;
+        int number;
         int digit;
         digit = 0;
-        List<Integer> list = new ArrayList<>();
-        Scanner input = new Scanner(System.in);
+        int sum;
+        sum = 0;
+        int cube;
         System.out.print("Enter number: ");
-        num = input.nextInt();
-        while(num >0){
-            list.add((num%10)*(num%10)*(num%10));
-            num = num / 10;
+        Scanner input = new Scanner(System.in);
+        number = input.nextInt();
+        while(number != 0){
+            digit = number % 10;
+            cube = digit * digit * digit;
+            number /= 10;
+            sum = sum + cube;
         }
-        for (int i = 0; i < list.size(); i++){
-            digit += list.get(i);
-        }
-        System.out.println(digit);
-    }
+        System.out.println(sum);
+        
+    }        
 }
