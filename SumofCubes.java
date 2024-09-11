@@ -6,6 +6,7 @@ public class SumofCubes{
     public static void main(String[] args) {
         int num;
         int digit;
+        digit = 0;
         List<Integer> list = new ArrayList<>();
         Scanner input = new Scanner(System.in);
         System.out.print("Enter number: ");
